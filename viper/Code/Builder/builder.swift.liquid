@@ -1,0 +1,26 @@
+//
+//  {{ prefix }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+final class {{ module_info.name }}ModuleBuilder {
+
+    static func build(moduleOutput: {{ module_info.name }}ModuleOutput?) -> (UIViewController, {{ module_info.name }}ModuleInput) {
+        let interactor = {{ module_info.name }}Interactor()
+
+        let presenter = {{ module_info.name }}Presenter(interactor: interactor, moduleOutput: moduleOutput)
+
+        let view = {{ module_info.name }}ViewController(output: presenter)
+
+        presenter.viewInput = view
+        presenter.router = view
+
+        return (view, presenter)
+    }
+
+}

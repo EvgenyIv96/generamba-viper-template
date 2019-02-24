@@ -1,0 +1,24 @@
+# Template information section
+name: "viper"
+summary: "Swift VIPER"
+author: "Evgeny Ivanov"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Builder
+- {name: Builder/ModuleBuilder.swift, path: Code/Builder/builder.swift.liquid}
+
+# View layer
+- {name: View/ViewInterface.swift, path: Code/View/view_interface.swift.liquid}
+- {name: View/ViewController.swift, path: Code/View/view_controller.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/ModuleInterface.swift, path: Code/Presenter/module_interface.swift.liquid}
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/InteractorInterface.swift, path: Code/Interactor/interactor_interface.swift.liquid}
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
